@@ -471,3 +471,10 @@ Here's some next steps if we still have time.
 3) Create a table called todo_types, they must have id, name, created_at, active. You are free to choose which types each column have.
 4) Add a column called todo_type_id in the todos table.
 5) Create a whole backoffice together with drizzleORM to create a todo app. Use any framework you'd like.
+
+## More links
+
+[drizzle-orm](https://github.com/drizzle-team/drizzle-orm/tree/main)
+[drizzle-orm sqlite-core readme](https://github.com/drizzle-team/drizzle-orm/blob/main/drizzle-orm/src/sqlite-core/README.md)
+[drizzle-orm migration fundamentals](https://orm.drizzle.team/docs/migrations)
+[drizzle-orm documentation](https://orm.drizzle.team/docs/get-started)
