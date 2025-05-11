@@ -446,6 +446,9 @@ Migrations are version‑controlled change scripts that keep every environment (
    2) In code: a single registry variable is singular.
    3) Columns are singular and snake case.
    4) In an app with backoffice and login system, I always use audit fields like datetime "created_at", integer "created_by_user_id" references tables users, datetime "updated_at", integer "updated_by_user_id" references table users. Audit fields are a must to figure out problems.
+   5) My migration naming conventions -> [intent-with-table]\_[name-of-table]\(intent-with-column\)\_(name-of-column):
+      1) Example to create table: "createtable_users"
+      2) Example to alter table by adding a column: "altertable_users_addcolumn_age"
 
 ## Note about DrizzleORM
 
