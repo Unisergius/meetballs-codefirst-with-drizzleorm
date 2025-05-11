@@ -16,7 +16,6 @@ with relational databases. It lets you define, query, and manipulate data using 
 
 SQL’s power lies in its declarative style: you describe what result you need, and the database engine figures out the how.
 
-
 ### What is a (Database) Schema?
 
 A schema is the formal blueprint of how data is organised inside a database.
@@ -422,7 +421,6 @@ main();
 
 *What happened? What does each query do? What is the select doing? What does the left join do?*
 
-
 ## Conclusion
 
 ### Migrations. Why bother?
@@ -443,6 +441,12 @@ Migrations are version‑controlled change scripts that keep every environment (
 
 **Rule of thumb**: treat migrations like any other code—review them, name them clearly, and never edit an applied migration; create a follow‑up migration instead.
 
+1) Use a naming convention together with your team and stick to it. Here's mine:
+   1) IE. table names are plural and snake case.
+   2) In code: a single registry variable is singular.
+   3) Columns are singular and snake case.
+   4) In an app with backoffice and login system, I always use audit fields like datetime "created_at", integer "created_by_user_id" references tables users, datetime "updated_at", integer "updated_by_user_id" references table users. Audit fields are a must to figure out problems.
+
 ## Note about DrizzleORM
 
 Drizzle’s migration tool doesn’t currently include a built‑in “revert” or “rollback” command. Instead, you have a couple of options:
@@ -454,3 +458,13 @@ Restore from Backup or a Snapshot:
 If you’ve taken backups or are using version‑controlled snapshots of your DB, you can restore the previous state.
 
 In practice, many teams using a code‑first workflow opt for the first approach—always creating a new migration that “undoes” the unwanted changes rather than reverting a previous migration automatically.
+
+## Complete the Todo App
+
+Here's some next steps if we still have time.
+
+1) Alter todo table to have a due_date in the database. Use only code, don't alter the table directly.
+2) Create files to create, read, update and delete todo tasks. Use hardcoded values, focus only on the ORM queries.
+3) Create a table called todo_types, they must have id, name, created_at, active. You are free to choose which types each column have.
+4) Add a column called todo_type_id in the todos table.
+5) Create a whole backoffice together with drizzleORM to create a todo app. Use any framework you'd like.
