@@ -6,7 +6,7 @@
 
 [Source from Wikipedia](https://en.wikipedia.org/wiki/Database) - tl;dr it's a persistent data store that is normally
 depicted by tables that can be related or not really.
-It's persistent, meaning that it's lifetime persist regardless of the apps retrieving data from it. They can be stored
+It's persistent, meaning that its lifetime persist regardless of the apps retrieving data from it. They can be stored
 as files or whole computer clusters.
 
 ### What is SQL?
